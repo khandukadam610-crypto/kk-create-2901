@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="notes-page">
+
+        <!-- Website Name -->
+
+        <div class="notes-logo">
+            kk_create_2901
+        </div>
+
+
+        <!-- Notes Container -->
+
+        <main class="notes-box">
+
+
+            <!-- Chapter Heading -->
+
+            <header class="chapter-heading">
+
+                <div
+                    class="chapter-number"
+                    id="chapter-number">
+                </div>
+
+                <h1 id="chapter-title">
+                </h1>
+
+            </header>
+
+
+            <!-- Subtopics List -->
+
+            <section class="chapter-overview">
+
+                <h2>या प्रकरणात</h2>
+
+                <div
+                    class="subtopic-list"
+                    id="subtopic-list">
+                </div>
+
+            </section>
+
+
+            <!-- Subtopics Wise Notes -->
+
+            <section class="notes-content">
+
+                <h2 class="notes-main-title">
+                    Create by कदम खंडेराव
+                </h2>
+
+                <div id="notes-container">
+                </div>
+
+            </section>
+
+
+            <!-- Important Points -->
+
+            <section
+                class="optional-section"
+                id="important-points-section">
+
+                <h2>
+                    ⭐ Important Points
+                </h2>
+
+                <div
+                    class="optional-content"
+                    id="important-points">
+                </div>
+
+            </section>
+
+
+            <!-- Image / Diagram -->
+
+            <section
+                class="optional-section"
+                id="image-section">
+
+                <h2>
+                    🖼️ Image / Diagram
+                </h2>
+
+                <div
+                    class="optional-placeholder"
+                    id="image-content">
+                </div>
+
+            </section>
+
+
+            <!-- Table -->
+
+            <section
+                class="optional-section"
+                id="table-section">
+
+                <h2>
+                    📊 Table
+                </h2>
+
+                <div
+                    class="optional-placeholder"
+                    id="table-content">
+                </div>
+
+            </section>
+
+
+            <!-- Map -->
+
+            <section
+                class="optional-section"
+                id="map-section">
+
+                <h2>
+                    🗺️ Map
+                </h2>
+
+                <div
+                    class="optional-placeholder"
+                    id="map-content">
+                </div>
+
+            </section>
+
+
+            <!-- Timeline -->
+
+            <section
+                class="optional-section"
+                id="timeline-section">
+
+                <h2>
+                    📅 Timeline
+                </h2>
+
+                <div
+                    class="optional-placeholder"
+                    id="timeline-content">
+                </div>
+
+            </section>
+
+
+            <!-- Download -->
+
+
+            <!-- Back -->
+
+            <div class="chapter-navigation">
+
+    <a href="#" id="previous-chapter" class="nav-button">
+        ← मागील प्रकरण
+    </a>
+
+    <a href="chapters-ancient.html" class="nav-button chapter-list-button">
+        📚 प्रकरणांची यादी
+    </a>
+
+    <a href="#" id="next-chapter" class="nav-button">
+        पुढील प्रकरण →
+    </a>
+
+</div>
+
+<button class="download-button" type="button" onclick="window.print()">
+    📥 Notes Download करा
+</button>
+
+
+    <!-- Chapter Data -->
+
+    <script src="chapters-data.js"></script>
+
+
+    <!-- Chapter System -->
+
+    <script>
+
+        // URL मधून Chapter Number मिळवणे
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+        const chapterNumber =
+            urlParams.get("chapter") || "1";
+            
+ // योग्य Chapter शोधणे
+
+        const chapter =
+            chapters[chapterNumber];
+
+
+        // Chapter अस्तित्वात असल्यास माहिती दाखवणे
+
+        if (chapter) {
+
+
+            // Chapter Number
+
+            document.getElementById("chapter-number").textContent =
+                "प्रकरण " + chapterNumber;
+
+
+            // Chapter Title
+
+            document.getElementById("chapter-title").textContent =
+                chapter.title;
+
+
+            // Subtopics
+
+            const subtopicList =
+                document.getElementById("subtopic-list");
+
+
+            if (chapter.subtopics.length > 0) {
+
+                chapter.subtopics.forEach((subtopic, index) => {
+
+                    const div =
+                        document.createElement("div");
+
+                    div.textContent =
+                        "①②③④⑤⑥⑦⑧⑨⑩"[index] +
+                        " " +
+                        subtopic;
+
+                    subtopicList.appendChild(div);
+
+                });
+
+            } else {
+
+                subtopicList.innerHTML =
+                    "<div>Subtopics लवकरच उपलब्ध होतील.</div>";
+
+            }
+
+
+            // Notes
+
+            const notesContainer =
+                document.getElementById("notes-container");
+
+
+            if (chapter.notes.length > 0) {
+
+                chapter.notes.forEach((note) => {
+
+
+                    const topic =
+                        document.createElement("div");
+
+                    topic.className =
+                        "note-topic";
+
+
+                    const heading =
+                        document.createElement("h3");
+
+                    heading.textContent =
+                        note.title;
+
+
+                    const points =
+                        document.createElement("div");
+
+                    points.className =
+                        "note-points";
+
+
+                    note.points.forEach((point) => {
+
+                        const paragraph =
+                            document.createElement("p");
+
+                        paragraph.textContent =
+                            "• " + point;
+
+                        points.appendChild(paragraph);
+
+                    });
+
+
+                    topic.appendChild(heading);
+
+                    topic.appendChild(points);
+
+                    notesContainer.appendChild(topic);
+
+                });
+
+            } else {
+
+                notesContainer.innerHTML =
+                    "<p>Notes लवकरच उपलब्ध होतील.</p>";
+
+            }
+
+
+        } else {
+
+            document.getElementById("chapter-number").textContent =
+                "प्रकरण उपलब्ध नाही";
+
+            document.getElementById("chapter-title").textContent =
+                "दिलेल्या प्रकरणाची माहिती सापडली नाही.";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

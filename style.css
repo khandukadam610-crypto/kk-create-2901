@@ -1,0 +1,883 @@
+/* ========================================
+   kk_create_2901
+   Premium Historical Academic Theme
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   GLOBAL BODY
+   ======================================== */
+
+body {
+    min-height: 100vh;
+
+    font-family: Georgia, "Noto Serif Devanagari", serif;
+
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,0.45), transparent 45%),
+        linear-gradient(135deg, #d8c39b, #efe3c3, #cdb585);
+
+    color: #352516;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+
+/* ========================================
+   REGISTRATION PAGE
+   ======================================== */
+
+.container {
+    width: 100%;
+    max-width: 620px;
+
+    background: rgba(248, 238, 211, 0.96);
+
+    border: 1px solid #8b6b3f;
+    border-radius: 8px;
+
+    padding: 45px 40px;
+
+    box-shadow:
+        0 12px 30px rgba(60, 40, 15, 0.30),
+        inset 0 0 35px rgba(120, 85, 35, 0.10);
+
+    position: relative;
+}
+
+
+/* Decorative Border */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    border: 1px solid rgba(139, 107, 63, 0.45);
+
+    pointer-events: none;
+}
+
+
+/* Website Title */
+
+.logo {
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #4b2e16;
+
+    margin-bottom: 12px;
+}
+
+
+/* Divider */
+
+.divider {
+    width: 100px;
+    height: 2px;
+
+    background: #806039;
+
+    margin: 0 auto 25px;
+}
+
+
+/* Main Heading */
+
+h2 {
+    text-align: center;
+
+    font-size: 25px;
+
+    color: #3e2918;
+
+    margin-bottom: 15px;
+}
+
+
+/* Description */
+
+.description {
+    text-align: center;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+    color: #5b4630;
+}
+
+
+/* Form */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #4a301b;
+}
+
+
+input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    color: #342313;
+
+    background: #fff9e9;
+
+    border: 1px solid #9b7a4b;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+
+input:focus {
+    border-color: #5c3b1e;
+
+    box-shadow: 0 0 0 3px rgba(92, 59, 30, 0.12);
+}
+
+
+/* Continue Button */
+
+.continue-btn {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #5a391e;
+
+    color: #fff5dc;
+
+    font-family: inherit;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.continue-btn:hover {
+    background: #3f2715;
+
+    transform: translateY(-1px);
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #765c3b;
+}
+
+
+/* ========================================
+   SUBJECTS PAGE
+   ======================================== */
+
+.subject-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+
+.subject-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    text-decoration: none;
+
+    color: #3e2918;
+
+    background: rgba(255, 249, 233, 0.75);
+
+    border: 1px solid #a4875b;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 4px 10px rgba(70, 45, 20, 0.12);
+
+    transition: 0.2s;
+}
+
+
+.subject-card:hover {
+    transform: translateY(-3px);
+
+    background: #fff8e7;
+
+    border-color: #6b4928;
+
+    box-shadow:
+        0 7px 16px rgba(70, 45, 20, 0.20);
+}
+
+
+.subject-icon {
+    min-width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    background: #e4d2a9;
+
+    border: 1px solid #a4875b;
+
+    border-radius: 50%;
+}
+
+
+.subject-card h3 {
+    margin-bottom: 6px;
+
+    font-size: 19px;
+
+    color: #4a2e18;
+}
+
+
+.subject-card p {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #6a5137;
+}
+
+
+/* ========================================
+   NOTES PAGE
+   ======================================== */
+
+.notes-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 30px 15px 50px;
+
+    background: #f4f0e8;
+
+    font-family: "Noto Sans Devanagari", sans-serif;
+
+    color: #2f2a24;
+}
+
+
+/* Website Name */
+
+.notes-logo {
+    text-align: center;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    color: #3b3026;
+}
+
+
+/* Main Notes Box */
+
+.notes-box {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 45px 55px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8d0c4;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   CHAPTER HEADING
+   ======================================== */
+
+.chapter-heading {
+    text-align: center;
+
+    margin-bottom: 38px;
+}
+
+
+.chapter-number {
+    font-size: 21px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+
+.chapter-heading h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   SUBTOPICS LIST
+   ======================================== */
+
+.chapter-overview {
+    margin-bottom: 40px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #d8d0c4;
+}
+
+
+.chapter-overview h2 {
+    margin: 0 0 15px 0;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    text-align: left;
+}
+
+
+.subtopic-list {
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+.subtopic-list div {
+    margin-bottom: 2px;
+}
+
+
+/* ========================================
+   NOTES
+   ======================================== */
+
+.notes-content {
+    min-height: 250px;
+}
+
+
+.notes-main-title {
+    margin: 0 0 25px 0;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+.note-topic {
+    margin-bottom: 30px;
+}
+
+
+.note-topic h3 {
+    margin: 0 0 10px 0;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+.note-points {
+    padding-left: 10px;
+}
+
+
+.note-points p {
+    margin: 0 0 5px 0;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   OPTIONAL SECTIONS
+   ======================================== */
+
+
+/* Default: Hidden */
+
+.optional-section {
+    display: none;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #ded8ce;
+}
+
+
+/* ON */
+
+.optional-section.optional-on {
+    display: block;
+}
+
+
+/* Optional Section Heading */
+
+.optional-section h2 {
+    margin: 0 0 18px 0;
+
+    text-align: left;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #352d25;
+}
+
+
+/* Optional Content */
+
+.optional-content {
+    padding: 16px 18px;
+
+    background: #faf8f4;
+
+    border-left: 3px solid #8a765b;
+
+    border-radius: 4px;
+}
+
+
+.optional-content p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* Optional Placeholder */
+
+.optional-placeholder {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background: #faf9f6;
+
+    border: 1px dashed #b9b0a3;
+
+    border-radius: 6px;
+}
+
+
+.optional-placeholder p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #766f66;
+}
+
+
+/* ========================================
+   DOWNLOAD
+   ======================================== */
+
+.download-area {
+    text-align: right;
+
+    margin-top: 40px;
+
+    margin-bottom: 30px;
+}
+
+
+.download-button {
+    padding: 12px 22px;
+
+    font-family: "Noto Sans Devanagari", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    background: #ffffff;
+
+    color: #2f2a24;
+
+    border: 1px solid #55504a;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.download-button:hover {
+    background: #f1ede6;
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   BACK LINK
+   ======================================== */
+
+.back-link {
+    display: inline-block;
+
+    font-size: 18px;
+
+    color: #2f2a24;
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .container {
+        padding: 35px 22px;
+    }
+
+
+    .logo {
+        font-size: 25px;
+    }
+
+
+    h2 {
+        font-size: 21px;
+    }
+
+
+    .description {
+        font-size: 15px;
+    }
+
+
+    .subject-card {
+        padding: 15px;
+    }
+
+
+    .subject-icon {
+        min-width: 48px;
+        height: 48px;
+
+        font-size: 24px;
+    }
+
+
+    .subject-card h3 {
+        font-size: 17px;
+    }
+
+
+    .notes-page {
+        padding: 20px 10px 35px;
+    }
+
+
+    .notes-logo {
+        font-size: 18px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .notes-box {
+        padding: 30px 22px;
+
+        border-radius: 16px;
+    }
+
+
+    .chapter-heading {
+        margin-bottom: 30px;
+    }
+
+
+    .chapter-number {
+        font-size: 18px;
+    }
+
+
+    .chapter-heading h1 {
+        font-size: 23px;
+
+        line-height: 1.55;
+    }
+
+
+    .chapter-overview {
+        margin-bottom: 30px;
+
+        padding-bottom: 22px;
+    }
+
+
+    .chapter-overview h2 {
+        font-size: 19px;
+    }
+
+
+    .subtopic-list {
+        font-size: 17px;
+
+        line-height: 1.75;
+    }
+
+
+    .notes-main-title {
+        font-size: 22px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .note-topic {
+        margin-bottom: 25px;
+    }
+
+
+    .note-topic h3 {
+        font-size: 19px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .note-points p {
+        margin-bottom: 4px;
+
+        font-size: 17px;
+
+        line-height: 1.65;
+    }
+
+
+    .optional-section {
+        margin-top: 28px;
+
+        padding-top: 22px;
+    }
+
+
+    .optional-section h2 {
+        font-size: 19px;
+    }
+
+
+    .optional-content p,
+    .optional-placeholder p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .download-area {
+        text-align: left;
+
+        margin-top: 30px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .download-button {
+        font-size: 16px;
+
+        width: 100%;
+    }
+
+
+    .back-link {
+        font-size: 16px;
+    }
+}
+
+
+/* ========================================
+   PRINT / PDF
+   ======================================== */
+
+@media print {
+
+    body {
+        background: white !important;
+
+        padding: 0 !important;
+    }
+
+
+    .notes-page {
+        padding: 0 !important;
+
+        background: white !important;
+    }
+
+
+    .notes-logo {
+        display: none !important;
+    }
+
+
+    .notes-box {
+        max-width: 100%;
+
+        margin: 0;
+
+        padding: 25px;
+
+        border: none;
+
+        box-shadow: none;
+
+        border-radius: 0;
+    }
+
+
+    .download-area,
+    .back-link {
+        display: none !important;
+    }
+
+
+    .notes-page,
+    .notes-box {
+        color: #000000 !important;
+    }
+
+
+    .note-topic {
+        break-inside: avoid;
+    }
+
+
+    .optional-section {
+        break-inside: avoid;
+    }
+}
