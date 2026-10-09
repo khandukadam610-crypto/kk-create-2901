@@ -881,3 +881,394 @@ input:focus {
         break-inside: avoid;
     }
 }
+/* =========================================
+   PREMIUM DEVELOPER SECTION
+   kk_create_2901
+   ========================================= */
+
+.developer-section {
+    margin-top: 55px;
+    padding: 42px 30px 35px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f0e3 0%,
+            #fffdf8 48%,
+            #eee2cc 100%
+        );
+
+    border: 1px solid rgba(139, 107, 63, 0.35);
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 45px rgba(70, 48, 25, 0.14),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+    text-align: center;
+}
+
+
+/* Decorative glow */
+
+.developer-section::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -60px;
+
+    background: rgba(180, 139, 67, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.developer-section::after {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    bottom: -80px;
+    left: -50px;
+
+    background: rgba(112, 79, 39, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* Founder badge */
+
+.developer-title {
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    margin-bottom: 25px;
+
+    background: #4d3824;
+    color: #f8e8c7;
+
+    border-radius: 50px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    box-shadow:
+        0 7px 18px rgba(77, 56, 36, 0.22);
+}
+
+
+/* Developer photo */
+
+.developer-photo {
+    display: block;
+
+    width: 145px;
+    height: 145px;
+
+    object-fit: cover;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    border: 6px solid #fffdf8;
+
+    outline: 2px solid #b58a4a;
+
+    box-shadow:
+        0 12px 30px rgba(55, 39, 22, 0.22);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.developer-photo:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 16px 38px rgba(55, 39, 22, 0.30);
+}
+
+
+/* Developer name */
+
+.developer-name {
+    margin: 8px 0 22px;
+
+    color: #3e2c1d;
+
+    font-family:
+        Georgia,
+        "Noto Serif Devanagari",
+        serif;
+
+    font-size: 29px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* Introduction */
+
+.developer-intro {
+    max-width: 720px;
+
+    margin: 0 auto 32px;
+
+    padding: 24px 26px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border-radius: 16px;
+
+    border: 1px solid
+        rgba(139, 107, 63, 0.18);
+
+    box-shadow:
+        0 8px 25px rgba(70, 48, 25, 0.07);
+}
+
+
+.developer-intro h3 {
+    margin: 0 0 10px;
+
+    color: #8b642f;
+
+    font-family:
+        Georgia,
+        "Noto Serif Devanagari",
+        serif;
+
+    font-size: 19px;
+}
+
+
+.developer-intro p {
+    margin: 0;
+
+    color: #514638;
+
+    font-family:
+        "Noto Sans Devanagari",
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* Feature grid */
+
+.developer-features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+
+/* Feature card */
+
+.developer-feature {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 19px;
+
+    text-align: left;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border: 1px solid
+        rgba(139, 107, 63, 0.16);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 7px 20px rgba(70, 48, 25, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.developer-feature:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(139, 107, 63, 0.38);
+
+    box-shadow:
+        0 13px 28px rgba(70, 48, 25, 0.13);
+}
+
+
+/* Feature icons */
+
+.feature-icon {
+    flex-shrink: 0;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f1e3ca;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+
+    box-shadow:
+        inset 0 0 0 1px
+        rgba(139, 107, 63, 0.12);
+}
+
+
+/* Feature headings */
+
+.developer-feature h3 {
+    margin: 1px 0 6px;
+
+    color: #4b3623;
+
+    font-family:
+        Georgia,
+        "Noto Serif Devanagari",
+        serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* Feature text */
+
+.developer-feature p {
+    margin: 0;
+
+    color: #625748;
+
+    font-family:
+        "Noto Sans Devanagari",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .developer-section {
+        margin-top: 40px;
+
+        padding: 32px 17px 27px;
+
+        border-radius: 20px;
+    }
+
+
+    .developer-title {
+        font-size: 12px;
+
+        padding: 7px 16px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .developer-photo {
+        width: 125px;
+        height: 125px;
+
+        border-width: 5px;
+    }
+
+
+    .developer-name {
+        font-size: 24px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .developer-intro {
+        padding: 19px 16px;
+
+        margin-bottom: 23px;
+    }
+
+
+    .developer-intro h3 {
+        font-size: 17px;
+    }
+
+
+    .developer-intro p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    .developer-features {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .developer-feature {
+        padding: 16px;
+    }
+
+}

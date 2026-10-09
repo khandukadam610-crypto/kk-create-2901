@@ -1,336 +1,526 @@
 <!DOCTYPE html>
 <html lang="mr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Chapter Notes</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Notes by कदम खंडेराव</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="notes-page">
+<div class="notes-page">
 
-        <!-- Website Name -->
+    <div class="notes-box">
 
-        <div class="notes-logo">
-            kk_create_2901
+        <!-- Chapter Heading -->
+        <section class="chapter-heading">
+
+            <div class="chapter-number"
+                 id="chapter-number">
+                प्रकरण १
+            </div>
+
+            <h1 id="chapter-title">
+                ऐतिहासिक स्रोत आणि इतिहासाची रचना
+            </h1>
+
+        </section>
+
+
+        <!-- Chapter Overview -->
+        <section class="chapter-overview">
+
+            <h2>या प्रकरणात</h2>
+
+            <div id="subtopic-list">
+                <!-- Subtopics JavaScript मधून येतील -->
+            </div>
+
+        </section>
+
+
+        <!-- Notes -->
+        <section class="notes-content">
+
+            <h2 class="notes-main-title">
+                Notes by कदम खंडेराव
+            </h2>
+
+            <div id="notes-container">
+                <!-- Notes JavaScript मधून येतील -->
+            </div>
+
+        </section>
+
+
+        <!-- Important Points -->
+        <section id="important-points-section"
+                 class="optional-section">
+
+            <h2>महत्त्वाचे मुद्दे</h2>
+
+            <div id="important-points"></div>
+
+        </section>
+
+
+        <!-- Image -->
+        <section id="image-section"
+                 class="optional-section">
+
+            <h2>Image / Diagram</h2>
+
+            <div id="image-content"></div>
+
+        </section>
+
+
+        <!-- Table -->
+        <section id="table-section"
+                 class="optional-section">
+
+            <h2>महत्त्वाची तक्ता</h2>
+
+            <div id="table-content"></div>
+
+        </section>
+
+
+        <!-- Map -->
+        <section id="map-section"
+                 class="optional-section">
+
+            <h2>Map</h2>
+
+            <div id="map-content"></div>
+
+        </section>
+
+
+        <!-- Timeline -->
+        <section id="timeline-section"
+                 class="optional-section">
+
+            <h2>Timeline</h2>
+
+            <div id="timeline-content"></div>
+
+        </section>
+
+
+        <!-- Buttons -->
+
+        <div class="notes-actions">
+
+            <button
+                class="download-button"
+                id="download-pdf-button"
+                type="button"
+                onclick="downloadNotesPDF()">
+
+                📥 Notes PDF Download करा
+
+            </button>
+
+
+            <a
+                href="chapters-ancient.html"
+                class="back-button">
+
+                ← मागे जा
+
+            </a>
+
         </div>
 
-
-        <!-- Notes Container -->
-
-        <main class="notes-box">
-
-
-            <!-- Chapter Heading -->
-
-            <header class="chapter-heading">
-
-                <div
-                    class="chapter-number"
-                    id="chapter-number">
-                </div>
-
-                <h1 id="chapter-title">
-                </h1>
-
-            </header>
-
-
-            <!-- Subtopics List -->
-
-            <section class="chapter-overview">
-
-                <h2>या प्रकरणात</h2>
-
-                <div
-                    class="subtopic-list"
-                    id="subtopic-list">
-                </div>
-
-            </section>
-
-
-            <!-- Subtopics Wise Notes -->
-
-            <section class="notes-content">
-
-                <h2 class="notes-main-title">
-                    Create by कदम खंडेराव
-                </h2>
-
-                <div id="notes-container">
-                </div>
-
-            </section>
-
-
-            <!-- Important Points -->
-
-            <section
-                class="optional-section"
-                id="important-points-section">
-
-                <h2>
-                    ⭐ Important Points
-                </h2>
-
-                <div
-                    class="optional-content"
-                    id="important-points">
-                </div>
-
-            </section>
-
-
-            <!-- Image / Diagram -->
-
-            <section
-                class="optional-section"
-                id="image-section">
-
-                <h2>
-                    🖼️ Image / Diagram
-                </h2>
-
-                <div
-                    class="optional-placeholder"
-                    id="image-content">
-                </div>
-
-            </section>
-
-
-            <!-- Table -->
-
-            <section
-                class="optional-section"
-                id="table-section">
-
-                <h2>
-                    📊 Table
-                </h2>
-
-                <div
-                    class="optional-placeholder"
-                    id="table-content">
-                </div>
-
-            </section>
-
-
-            <!-- Map -->
-
-            <section
-                class="optional-section"
-                id="map-section">
-
-                <h2>
-                    🗺️ Map
-                </h2>
-
-                <div
-                    class="optional-placeholder"
-                    id="map-content">
-                </div>
-
-            </section>
-
-
-            <!-- Timeline -->
-
-            <section
-                class="optional-section"
-                id="timeline-section">
-
-                <h2>
-                    📅 Timeline
-                </h2>
-
-                <div
-                    class="optional-placeholder"
-                    id="timeline-content">
-                </div>
-
-            </section>
-
-
-            <!-- Download -->
-
-
-            <!-- Back -->
-
-            <div class="chapter-navigation">
-
-    <a href="#" id="previous-chapter" class="nav-button">
-        ← मागील प्रकरण
-    </a>
-
-    <a href="chapters-ancient.html" class="nav-button chapter-list-button">
-        📚 प्रकरणांची यादी
-    </a>
-
-    <a href="#" id="next-chapter" class="nav-button">
-        पुढील प्रकरण →
-    </a>
+    </div>
 
 </div>
 
-<button class="download-button" type="button" onclick="window.print()">
-    📥 Notes Download करा
-</button>
+
+<!-- Chapter Data -->
+<script src="chapters-data.js"></script>
 
 
-    <!-- Chapter Data -->
+<!-- Chapter Loading Script -->
 
-    <script src="chapters-data.js"></script>
+<script>
 
+const urlParams = new URLSearchParams(window.location.search);
+const chapterNumber = urlParams.get("chapter") || "1";
 
-    <!-- Chapter System -->
+const chapter = chapters[chapterNumber];
 
-    <script>
+if (!chapter) {
 
-        // URL मधून Chapter Number मिळवणे
+    document.getElementById("chapter-number").textContent =
+        "प्रकरण सापडले नाही";
 
-        const urlParams =
-            new URLSearchParams(window.location.search);
+    document.getElementById("chapter-title").textContent = "";
 
-        const chapterNumber =
-            urlParams.get("chapter") || "1";
-            
- // योग्य Chapter शोधणे
+} else {
 
-        const chapter =
-            chapters[chapterNumber];
+    document.getElementById("chapter-number").textContent =
+        "प्रकरण " + chapterNumber;
 
-
-        // Chapter अस्तित्वात असल्यास माहिती दाखवणे
-
-        if (chapter) {
+    document.getElementById("chapter-title").textContent =
+        chapter.title;
 
 
-            // Chapter Number
+    /* Subtopics */
 
-            document.getElementById("chapter-number").textContent =
-                "प्रकरण " + chapterNumber;
+    const subtopicList =
+        document.getElementById("subtopic-list");
 
+    subtopicList.innerHTML = "";
 
-            // Chapter Title
+    if (chapter.subtopics) {
 
-            document.getElementById("chapter-title").textContent =
-                chapter.title;
+        chapter.subtopics.forEach((subtopic, index) => {
 
+            const div = document.createElement("div");
 
-            // Subtopics
+            div.className = "subtopic-item";
 
-            const subtopicList =
-                document.getElementById("subtopic-list");
+            div.textContent =
+                (index + 1) + ". " + subtopic;
 
+            subtopicList.appendChild(div);
 
-            if (chapter.subtopics.length > 0) {
+        });
 
-                chapter.subtopics.forEach((subtopic, index) => {
-
-                    const div =
-                        document.createElement("div");
-
-                    div.textContent =
-                        "①②③④⑤⑥⑦⑧⑨⑩"[index] +
-                        " " +
-                        subtopic;
-
-                    subtopicList.appendChild(div);
-
-                });
-
-            } else {
-
-                subtopicList.innerHTML =
-                    "<div>Subtopics लवकरच उपलब्ध होतील.</div>";
-
-            }
+    }
 
 
-            // Notes
+    /* Notes */
 
-            const notesContainer =
-                document.getElementById("notes-container");
+    const notesContainer =
+        document.getElementById("notes-container");
 
+    notesContainer.innerHTML = "";
 
-            if (chapter.notes.length > 0) {
+    if (chapter.notes) {
 
-                chapter.notes.forEach((note) => {
+        chapter.notes.forEach((note) => {
 
+            const topic =
+                document.createElement("div");
 
-                    const topic =
-                        document.createElement("div");
-
-                    topic.className =
-                        "note-topic";
-
-
-                    const heading =
-                        document.createElement("h3");
-
-                    heading.textContent =
-                        note.title;
+            topic.className = "note-topic";
 
 
-                    const points =
-                        document.createElement("div");
+            const heading =
+                document.createElement("h3");
 
-                    points.className =
-                        "note-points";
+            heading.textContent = note.topic;
 
-
-                    note.points.forEach((point) => {
-
-                        const paragraph =
-                            document.createElement("p");
-
-                        paragraph.textContent =
-                            "• " + point;
-
-                        points.appendChild(paragraph);
-
-                    });
+            topic.appendChild(heading);
 
 
-                    topic.appendChild(heading);
+            const points =
+                document.createElement("div");
 
-                    topic.appendChild(points);
+            points.className = "note-points";
 
-                    notesContainer.appendChild(topic);
+
+            if (note.points) {
+
+                note.points.forEach((point) => {
+
+                    const p =
+                        document.createElement("p");
+
+                    p.textContent = "• " + point;
+
+                    points.appendChild(p);
 
                 });
 
-            } else {
-
-                notesContainer.innerHTML =
-                    "<p>Notes लवकरच उपलब्ध होतील.</p>";
-
             }
 
+            topic.appendChild(points);
 
-        } else {
+            notesContainer.appendChild(topic);
 
-            document.getElementById("chapter-number").textContent =
-                "प्रकरण उपलब्ध नाही";
+        });
 
-            document.getElementById("chapter-title").textContent =
-                "दिलेल्या प्रकरणाची माहिती सापडली नाही.";
+    }
+
+
+    /* Important Points */
+
+    if (
+        chapter.importantPoints &&
+        chapter.importantPoints.length > 0
+    ) {
+
+        const section =
+            document.getElementById(
+                "important-points-section"
+            );
+
+        const container =
+            document.getElementById(
+                "important-points"
+            );
+
+        container.innerHTML = "";
+
+        chapter.importantPoints.forEach((point) => {
+
+            const p =
+                document.createElement("p");
+
+            p.textContent = "• " + point;
+
+            container.appendChild(p);
+
+        });
+
+        section.classList.add("optional-on");
+
+    }
+
+
+    /* Image */
+
+    if (chapter.image) {
+
+        document.getElementById("image-content")
+            .innerHTML = chapter.image;
+
+        document.getElementById("image-section")
+            .classList.add("optional-on");
+
+    }
+
+
+    /* Table */
+
+    if (chapter.table) {
+
+        document.getElementById("table-content")
+            .innerHTML = chapter.table;
+
+        document.getElementById("table-section")
+            .classList.add("optional-on");
+
+    }
+
+
+    /* Map */
+
+    if (chapter.map) {
+
+        document.getElementById("map-content")
+            .innerHTML = chapter.map;
+
+        document.getElementById("map-section")
+            .classList.add("optional-on");
+
+    }
+
+
+    /* Timeline */
+
+    if (chapter.timeline) {
+
+        document.getElementById("timeline-content")
+            .innerHTML = chapter.timeline;
+
+        document.getElementById("timeline-section")
+            .classList.add("optional-on");
+
+    }
+
+}
+
+</script>
+
+
+<!-- PDF Download Library -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+</script>
+
+
+<!-- PDF Download System -->
+
+<script>
+
+async function downloadNotesPDF() {
+
+    const element =
+        document.querySelector(".notes-box");
+
+
+    if (!element) {
+
+        alert("Notes सापडल्या नाहीत.");
+
+        return;
+
+    }
+
+
+    const button =
+        document.getElementById(
+            "download-pdf-button"
+        );
+
+
+    const backButton =
+        document.querySelector(
+            ".back-button"
+        );
+
+
+    /* Button temporarily disable */
+
+    if (button) {
+
+        button.disabled = true;
+
+        button.textContent =
+            "⏳ PDF तयार होत आहे...";
+
+    }
+
+
+    /* Buttons PDF मध्ये दिसू नयेत */
+
+    if (button) {
+
+        button.style.display =
+            "none";
+
+    }
+
+
+    if (backButton) {
+
+        backButton.style.display =
+            "none";
+
+    }
+
+
+    /* PDF filename */
+
+    const fileName =
+        "chapter-" +
+        chapterNumber +
+        "-notes.pdf";
+
+
+    /* PDF settings */
+
+    const options = {
+
+        margin: 10,
+
+        filename: fileName,
+
+        image: {
+
+            type: "jpeg",
+
+            quality: 0.95
+
+        },
+
+        html2canvas: {
+
+            scale:
+                window.innerWidth < 600
+                    ? 1.5
+                    : 2,
+
+            useCORS: true,
+
+            logging: false,
+
+            backgroundColor:
+                "#ffffff"
+
+        },
+
+        jsPDF: {
+
+            unit: "mm",
+
+            format: "a4",
+
+            orientation: "portrait"
+
+        },
+
+        pagebreak: {
+
+            mode: [
+                "css",
+                "legacy"
+            ]
 
         }
 
-    </script>
+    };
+
+
+    try {
+
+        await html2pdf()
+
+            .set(options)
+
+            .from(element)
+
+            .save();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "PDF तयार करताना समस्या आली. कृपया पुन्हा प्रयत्न करा."
+        );
+
+    }
+
+
+    /* Buttons परत दाखवा */
+
+    if (button) {
+
+        button.style.display =
+            "";
+
+        button.disabled =
+            false;
+
+        button.textContent =
+            "📥 Notes PDF Download करा";
+
+    }
+
+
+    if (backButton) {
+
+        backButton.style.display =
+            "";
+
+    }
+
+}
+
+</script>
 
 
 </body>
-
 </html>
